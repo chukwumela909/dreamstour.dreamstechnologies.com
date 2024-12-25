@@ -438,7 +438,8 @@
                             <div class="mb-3">
                                 <h6 class="fs-16">Payment With Cryptocurrency</h6>
                             </div>
-                            <p>Transfer the required amount in crypto</p>
+                            <p>Transfer the required amount in crypto, and click the button when you are done.</p>
+
 
                             <div class="container mt-5">
                                 <div class="row justify-content-center">
@@ -545,7 +546,7 @@
                 </div>
 
                 <!-- Review Order Details -->
-                <div class="col-lg-4 theiaStickySidebar">
+                <!-- <div class="col-lg-4 theiaStickySidebar">
                     <div class="card order-details">
                         <div class="card-header">
                             <div class="d-flex align-items-center justify-content-between header-content">
@@ -629,7 +630,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /Review Order Details -->
 
             </div>
@@ -648,10 +649,10 @@
                         <div class="booking-icon text-center mb-3">
                             <img src="assets/img/icons/tick-circle.svg" alt="icon" class="img-fluid">
                         </div>
-                        <h5 class="text-center mb-3">Payment Successful</h5>
+                        <h5 class="text-center mb-3">Successfully Booked</h5>
                         <div class="text-center mb-4">
-                            <p>Booking on <strong>"Econnomy Class"</strong> has been successful with Reference Number
-                                <span class="text-primary"> #12559845</span>
+                            <p>Booking on <strong id="modal-ticket"></strong> has been successful 
+                               we will review your payment and send you a mail
                             </p>
                         </div>
                         <div class="d-flex align-items-center justify-content-center ">
@@ -982,16 +983,28 @@
 
     <script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
         data-cf-settings="671d257c38d4887ee85370f1-|49" defer></script>
-</body>
-
-<script>
+        <script>
     // Load the saved option from localStorage on page load
     window.addEventListener('DOMContentLoaded', () => {
         const savedOption = localStorage.getItem('selectedClass');
         document.getElementById("price-ticket").textContent =" I have transferred for " + savedOption
+        document.getElementById("modal-ticket").textContent =  savedOption
     });
 
 </script>
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'fdad8ac9c8863265614d6c83899ab2b80b288b5e';
+    window.smartsupp || (function (d) {
+        var s, c, o = smartsupp = function () { o.push(arguments) }; o = [];
+        s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+        c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+</script>
+</body>
+
+
 <!-- Mirrored from dreamstour.dreamstechnologies.com/html/flight-booking.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Dec 2024 10:51:30 GMT -->
 
 </html>
